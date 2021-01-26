@@ -1,8 +1,5 @@
 {
   "version": 2,
-  "name": "InstaPet-server",
-  "alias": ["InstaPet-api"],
-  "builds": [{ "src": "index.js", "use": "@now/node" }],
   "routes": [{
     "headers": {
         "Access-Control-Allow-Origin": "*",
