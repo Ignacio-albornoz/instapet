@@ -1,5 +1,7 @@
 {
   "version": 2,
+  "name": "instapet-server",
+  "builds": [{ "src": "index.js", "use": "@vercel/node" }],
   "routes": [{
     "headers": {
         "Access-Control-Allow-Origin": "*",

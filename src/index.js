@@ -1,5 +1,25 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { ApolloClient, HttpLink, InMemoryCache } from 'apollo-boost'
+import { ApolloProvider } from 'react-apollo'
+import Context from './Context'
+
 import { App } from './App'
 
-ReactDOM.render(<App />, document.getElementById('app'))
+const cache = new InMemoryCache()
+
+const link = new HttpLink({
+  uri: 'https://instapet-bci0mbu3v.vercel.app/graphql'
+})
+
+const client = new ApolloClient({
+  cache,
+  link
+})
+
+ReactDOM.render(
+  <Context.Provider>
+    <ApolloProvider client={client}>
+      <App />
+    </ApolloProvider>
+  </Context.Provider>, document.getElementById('app'))

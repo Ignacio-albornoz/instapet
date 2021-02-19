@@ -1,5 +1,6 @@
 {
 	"version": 2,
+	"alias": ["instapet-api"],
 	"builds": [
 	  { "use": "@vercel/static-build", "src": "package.json"}
 	],

@@ -14,3 +14,16 @@ const fadeInKeyFrame = keyframes`
 export const fadeIn = ({ time = '1s', type = 'ease' } = {}) => {
   return css`animation: ${time} ${fadeInKeyFrame} ${type};`
 }
+
+const topAnimationKeyFrame = keyframes`
+    from{
+        top: -100px;
+    }
+    to{
+        top: -10;
+    }
+    
+`
+export const topAnimation = ({ time = '0.5s', type = 'ease' } = {}) => {
+  return css`animation: ${time} ${topAnimationKeyFrame} ${type};`
+}
